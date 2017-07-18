@@ -8,7 +8,11 @@ class App extends Component {
 		super(props);
 		this.state = {
 			difficulty : "",
-			difficulties : [{easy : "łatwy"}, {medium : "normalny"}, {hard : "trudny"}],
+			difficulties : [
+				{easy : "łatwy"}, 
+				{medium : "normalny"}, 
+				{hard : "trudny"}
+			],
 			settingDifficulty : true
 		}
 		this.setDifficultyInState = this.setDifficultyInState.bind(this);
@@ -16,12 +20,10 @@ class App extends Component {
 
 	//funkcja do przekazania w dol - ustawia tu state, a ten jest nastepnie przekazywany w dol do komponentu z gra
 	setDifficultyInState = (chosenDifficulty) => {
-		console.log(this.state.difficulty)
 		this.setState({
 			difficulty : chosenDifficulty,
 			settingDifficulty : false
 		})
-		console.log(this.state.difficulty)
 	}
 
 	render() {
